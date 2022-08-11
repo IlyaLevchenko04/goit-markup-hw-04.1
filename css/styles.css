@@ -75,6 +75,9 @@ img{
     line-height: 1.33;
     letter-spacing: 0.02em;
     color: var(--main-color-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-link:hover, .nav-link:focus{
@@ -126,6 +129,14 @@ img{
     fill: #000000;
 }
 
+.tel:focus .mail{
+    fill: #000000;
+}
+
+.tel:focus .phone{
+    fill: #000000;
+}
+
 
 
 
@@ -139,6 +150,8 @@ img{
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hearofoto.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 .hero-title{
     font-weight: 900;
@@ -215,7 +228,6 @@ img{
 .advantages-photo{
     width: 70px;
     height: 70px;
-    margin: 25px 100px;
 }
 
 .advantages-photo-container{
@@ -224,6 +236,9 @@ img{
     background-color: #F5F4FA;
     margin-bottom: 30px;
     border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*-------------------------------------------------Photo-------------------------------------------------*/
@@ -305,12 +320,9 @@ img{
   .team-soc-list{
     display: flex;
     gap: 10px;
-  }
-
-  .team-soc-container{
+    justify-content: center;
+    align-items: center;
     margin-top: 16px;
-    margin-right: 32px;
-    margin-left: 32px;
   }
 
   .team-soc-item{
@@ -319,7 +331,7 @@ img{
     border: 3px  #000000;
   }
 
-  .team-soc-item:hover{
+  .team-soc-link:hover{
     border-radius: 50%;
     background-color: #2196F3;
   }
@@ -327,6 +339,25 @@ img{
   .team-soc-item:hover .team-soc{
     fill: #fff;
   }
+
+  .team-soc-link:focus .team-soc{
+    fill: #fff;
+  }
+
+  .team-soc-link:focus  {
+    border-radius: 50%;
+    background-color: #2196F3;
+  }
+
+  .team-soc-link{
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+ 
 /*-------------------------------------------------Footer-------------------------------------------------*/
 
 
@@ -397,27 +428,40 @@ address{
 }
 
 .soc-links-container{
-    display: inline-block;
     margin-left: 70px;
 }
 
 .footer-title{
+    font-family: 'Roboto';
+    font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.03em;
-    color: #fff;
+    text-transform: uppercase;
     margin-bottom: 20px;
+    color: #fff;
 }
 
-.footer-soc-item:hover{
+.footer-soc-link:hover{
     background-color: #2196F3;
+    border-radius: 50%;
 }
 
-.footer-soc-item:focus{
+.footer-soc-link:focus{
     background-color: #2196F3;
+    border-radius: 50%;
 }
 
+.footer-soc-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container{
+    display: flex;
+}
 
 /*-------------------------------------------------clients-------------------------------------------------*/
 
@@ -439,27 +483,37 @@ address{
 .clients-item{
     width: 170px;
     height: 92px;
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
 }
 
 .logo{
     fill: #AFB1B8;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    margin-left: 32px;
-    margin-right: 32px;
 }
 
-.clients-item:hover{
+.clients-link:hover{
     border: 1px solid #2196F3;
 }
 
-.clients-item:hover .logo{
+.clients-link:hover .logo{
     fill: #2196F3;
 }
 
+.clients-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
 
+.clients-link:focus{
+    border: 1px solid #2196F3;
+}
+
+.clients-link:focus .logo{
+    fill: #2196F3;
+}
 /*-------------------------------------------------PORTFOLIO-------------------------------------------------*/
 
 
@@ -469,6 +523,8 @@ address{
     gap: 8px;
     margin-bottom: 50px;
 }
+
+
 
 .menu-button{
     font-weight: 500;
@@ -483,6 +539,12 @@ address{
     }
 
 .menu-button:hover{
+    color: #fff;
+    background-color: #2196F3;
+    box-shadow: 0 3px 2px 0 rgba(47, 48, 58, 0.4);
+}
+
+.menu-button:focus{
     color: #fff;
     background-color: #2196F3;
     box-shadow: 0 3px 2px 0 rgba(47, 48, 58, 0.4);
@@ -515,11 +577,19 @@ address{
     padding-top: 20px;
     padding-bottom: 20px;
    padding-left: 24px;
+   padding-right: 24px;
 }
 
-.portfolio-item:hover{
+.portfolio-link:hover{
     box-shadow:  0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2) ;
 }
 
+.portfolio-link:focus{
+    box-shadow:  0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2) ;
+}
+
+.portfolio-link{
+    display: block;
+}
 
 
